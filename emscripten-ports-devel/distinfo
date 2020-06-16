@@ -1,0 +1,5 @@
+TIMESTAMP = 1592321932
+SHA256 (emscripten-ports-SDL2-1.39.18-865eadd_GH0.tar.gz) = 51174bcb89b67e25d0b84cdd96f04d63a46a7bd6cfeca0181ab96b045db03aab
+SIZE (emscripten-ports-SDL2-1.39.18-865eadd_GH0.tar.gz) = 5782760
+SHA256 (emscripten-ports-zlib-69f24a2_GH0.tar.gz) = 8d83b393a49dc0f757ce4c810d403bd88aa03dda5c7fb39952f2067c564c9029
+SIZE (emscripten-ports-zlib-69f24a2_GH0.tar.gz) = 605054

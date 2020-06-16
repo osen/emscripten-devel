@@ -1,4 +1,4 @@
-PORTNAME=emscripten
+PORTNAME=emscripten-devel
 DISTVERSION=1.39.18
 CATEGORIES=devel
 MAINTAINER=kpedersen@gmx.com
