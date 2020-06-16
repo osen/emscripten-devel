@@ -1,4 +1,5 @@
-PORTNAME=emscripten-devel
+PORTNAME=emscripten
+PKGNAMESUFFIX=-devel
 DISTVERSION=1.39.18
 CATEGORIES=devel
 MAINTAINER=kpedersen@gmx.com
@@ -76,4 +77,3 @@ do-install:
 		cmake --build . --target install
 
 .include <bsd.port.mk>
-

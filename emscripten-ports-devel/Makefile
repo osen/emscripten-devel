@@ -1,4 +1,5 @@
-PORTNAME=emscripten-ports-devel
+PORTNAME=emscripten-ports
+PKGNAMESUFFIX=-devel
 DISTVERSION=1.39.18
 CATEGORIES=devel
 MAINTAINER=kpedersen@gmx.com
@@ -21,15 +22,11 @@ GH_TUPLE= \
 do-configure:
 	cd ${WRKSRC} && mkdir build && cd build && \
 		emcmake cmake .. \
-		-DCMAKE_C_COMPILER=${PREFIX}/bin/emcc \
-		-DCMAKE_AR=${PREFIX}/bin/emar \
 		-DCMAKE_BUILD_TYPE=Release \
 		-DCMAKE_INSTALL_PREFIX=${STAGEDIR}${PREFIX}/lib/emscripten/system/local
 
 	cd ${WRKSRC_ZLIB} && mkdir build && cd build && \
 		emcmake cmake .. \
-		-DCMAKE_C_COMPILER=${PREFIX}/bin/emcc \
-		-DCMAKE_AR=${PREFIX}/bin/emar \
 		-DCMAKE_BUILD_TYPE=Release \
 		-DCMAKE_INSTALL_PREFIX=${STAGEDIR}${PREFIX}/lib/emscripten/system/local
 
@@ -48,4 +45,3 @@ do-install:
 		cmake --build . --target install
 
 .include <bsd.port.mk>
-
