@@ -51,6 +51,11 @@ do-install:
 	@rm -r -f ${STAGEDIR}${PREFIX}/lib/${PORTNAME}/.* || true
 	rm -r -f ${STAGEDIR}${PREFIX}/lib/${PORTNAME}/*.bat
 
+	cat ${SCRIPTDIR}/run_python.sh > ${STAGEDIR}${PREFIX}/lib/${PORTNAME}/tools/run_python.sh
+
+	cd ${STAGEDIR}${PREFIX}/lib/${PORTNAME} && \
+		${PYTHON_CMD} tools/create_entry_points.py
+
 	cat ${SCRIPTDIR}/emcc > ${STAGEDIR}${PREFIX}/bin/emcc
 	chmod ugo+x ${STAGEDIR}${PREFIX}/bin/emcc
 	cd ${STAGEDIR}${PREFIX}/bin && \
